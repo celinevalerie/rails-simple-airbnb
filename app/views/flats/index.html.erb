@@ -1,0 +1,29 @@
+<h1 style="text-align: center">Flats</h1>
+
+
+<!-- <div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div> -->
+<% image = ["1", 2, 3, 4, 5] %>
+<div style="display: flex; margin: 0px 100px">
+  <% @flats.each do |flat| %>
+    <div class="card" style="width: 18rem; margin: 5px;">
+      <img src="https://picsum.photos/seed/picsum/500/500" class="card-img-top" alt="...">
+      <div class="card-body">
+            <h3 class = "card-title"> <%= flat.name %> </h3>
+            <p class="card-text">🏠: <%= flat.description %></p>
+            <p class="card-text">💰: <%= flat.price_per_night %></p>
+            <p class="card-text">👩‍👩‍👦: <%= flat.number_of_guests %></p>
+          <a href="#" class="card-link" style="margin: 10px; color: blue; ">More info</a>
+          <a href="#" class="card-link" style="margin: 10px; color: red;">Edit</a>
+          <a href="#" class="card-link" style="margin: 10px; color: green;">Remove</a>
+      </div>
+    </div>
+  <% end %>
+</div>
+<!-- flat.address flat.description flat.price_per_night flat.number_of_guests -->
